@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR PREEDA,MD- BOT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+
+        <header class="chat-header">
+            <div class="clinic-info">
+                <img src="images/clinic-logo.png" alt="คลินิกสุขภาพดี" class="clinic-logo">
+                <div>
+                    <h1>DR PREEDA,MD</h1>
+                    <p>แชทบอทให้บริการ 08:00-20:00 น.</p>
+                </div>
+            </div>
+                <div class="header-actions">
+                  <button id="clearChatBtn" class="icon-btn" title="ล้างประวัติการสนทนา" >  <i class="fas fa-trash-alt"></i></button>
+              </div>
+        </header>
+
+        <main class="chat-main">
+            <div id="chatMessages" class="chat-messages">
+                <!-- ข้อความจะแสดงที่นี่ -->
+                <div class="welcome-message">
+                    <p>สวัสดีค่ะ! ยินดีต้อนรับสู่คลินิกสุขภาพดี</p>
+                    <p>เราพร้อมให้คำปรึกษาด้านสุขภาพทุกวัน เวลา 08:00-20:00 น.</p>
+                    <div class="quick-questions">
+                        <button class="quick-btn" data-question="ต้องการนัดหมายแพทย์">ต้องการนัดหมายแพทย์</button>
+                        <button class="quick-btn" data-question="คลินิกเปิดกี่โมง">คลินิกเปิดกี่โมง?</button>
+                        <button class="quick-btn" data-question="ตรวจสุขภาพราคาเท่าไหร่">ตรวจสุขภาพราคาเท่าไหร่?</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="medical-icons">
+                    <button class="med-icon" data-question="อาการปวดหัวควรทำอย่างไร"><i class="fas fa-head-side-virus"></i></button>
+                    <button class="med-icon" data-question="อาการไข้สูงควรทำอย่างไร"><i class="fas fa-temperature-high"></i></button>
+                    <button class="med-icon" data-question="คลินิกมีบริการอะไรบ้าง"><i class="fas fa-procedures"></i></button>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="userInput" placeholder="พิมพ์ข้อความของคุณ..." autocomplete="off">
+                    <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+                    <button id="voiceBtn"><i class="fas fa-microphone"></i></button>
+                </div>
+                <p class="disclaimer">บริการนี้ไม่ใช่การวินิจฉัยโรค กรุณาตรวจสอบกับแพทย์สำหรับอาการรุนแรง</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Component -->
+    <script src="components/chat-bubble.js"></script>
+    <script src="components/typing-indicator.js"></script>
+    
+    <!-- Main JS -->
+    <script src="script.js"></script>
+</body>
+</html>
